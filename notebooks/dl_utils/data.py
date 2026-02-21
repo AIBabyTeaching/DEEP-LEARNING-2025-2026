@@ -93,7 +93,7 @@ def download_kaggle_competition(
     return target_path
 
 
-def load_tfds_dataset(
+def load_tfds_dataset( # download from TF datasets and return it.
     name: str,
     *,
     split: str = "train",
@@ -124,9 +124,9 @@ def load_tfds_dataset(
     """
 
     ds, info = tfds.load(
-        name,
-        split=split,
-        data_dir=data_dir,
+        name, # Dataset identifier (In our case "fashion_mnist")
+        split=split, # Train/Test
+        data_dir=data_dir, # Directory of the data to be cached in
         as_supervised=as_supervised,
         shuffle_files=shuffle_files,
         with_info=True,
@@ -138,7 +138,7 @@ def load_tfds_dataset(
 def prepare_for_training(
     dataset: tf.data.Dataset,
     *,
-    batch_size: int = 32,
+    batch_size: int = 32, # How frequent the model weights are updated.
     shuffle_buffer: int | None = 1000,
     cache: bool = True,
     augment_fn: Callable[[Any], Any] | None = None,
