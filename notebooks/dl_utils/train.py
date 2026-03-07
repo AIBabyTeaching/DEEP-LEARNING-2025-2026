@@ -78,7 +78,7 @@ def compile_and_fit(
 
     history = model.fit(
         train_ds,
-        epochs=epochs,
+        epochs=epochs, 
         validation_data=validation_ds,
         callbacks=list(callbacks or []),
         **fit_kwargs,
