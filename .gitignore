@@ -1,5 +1,6 @@
 old content/
 notebooks/data/*
+2025_Sept_NOTEBOOKS/data/*
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
