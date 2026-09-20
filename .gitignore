@@ -61,3 +61,8 @@ pytest_cache/
 
 # TensorBoard
 *.tfevents*
+
+# Local-only smart teaching materials
+SmartAssignment*
+SmartClasswork*
+SmartExam*
